@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  
+    <input type="email" name="Email" class="form-control" placeholder="Email" ngModel [(ngModel)]="filter.Email">
+    <input type="text"  name="Phone" class="form-control" placeholder="Phone" ngModel [(ngModel)]="filter.Phone">
+    <input type="text" name="Name" class="form-control" placeholder="Name" ngModel [(ngModel)]="filter.Name">
+    <input type="text" name="Company" class="form-control" placeholder="Company" ngModel [(ngModel)]="filter.Company">
+    <select class="form-control" ngModel name="Country" [(ngModel)]="filter.Country">
+      <option *ngFor="let country of countries" [selected]="country.Name===filter.Country">{{country.Name}}</option>
+    </select>
+    
+    <input type="date" name="Date" class="form-control" ngModel [(ngModel)]="filter.Date">
+    <button type="submit" class="btn btn-primary btn-custom mb-4" ><i class="fas fa-filter"></i> Filter</button>
+  </form>

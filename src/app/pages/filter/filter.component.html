@@ -1,0 +1,18 @@
+<div class="row mt-3 filter px-3">
+    <div class="col-md-3 filter-form text-center pt-5" *ngIf="!hideMenu">
+      <div class="d-flex justify-content-around">
+        <h1 class="mb-5">Filters</h1>
+        <i class="fas fa-chevron-circle-left fa-3x" (click)="toggleMenu()"></i>
+      </div>
+      <hr>
+      <app-filter-form [filter]="filter"  [countries]="countries" (submitForm)="parentSubmit($event)"></app-filter-form>
+    </div>
+    <div class="col-md-1 filter-form text-center pt-5" *ngIf="hideMenu">
+      <i class="fas fa-chevron-circle-right fa-3x" (click)="toggleMenu()"></i>
+    </div>
+    <div class="col-md-9 px-3">
+      <div class="data-table-container">
+        <app-heroes-table [heroes]="heroes"></app-heroes-table>
+      </div>
+    </div>
+  </div>

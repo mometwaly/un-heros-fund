@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://countryapi.gear.host/v1/Country/getCountries",
+      "secure": false
+    }
+  }

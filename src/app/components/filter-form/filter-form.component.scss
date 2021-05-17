@@ -1,0 +1,26 @@
+input{
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 0;
+    height: 50px;
+    &:focus{
+        border: none;
+        border-bottom: 2px solid #51A4FF;
+        box-shadow: none;
+    }
+}
+select{
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 0;
+    height: 50px;
+    &:focus{
+        border: none;
+        border-bottom: 2px solid #51A4FF;
+        box-shadow: none;
+    }
+}
+.btn-custom{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}

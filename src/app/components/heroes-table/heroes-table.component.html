@@ -1,0 +1,25 @@
+<div class="head px-2">
+ <p class="mt-2">Heroes</p>
+</div>
+<table class="table" *ngIf="heroes">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+            <th scope="col">Country</th>
+            <th scope="col">Company</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let hero of heroes">
+            <td>{{hero.Name}}</td>
+            <td>{{hero.Phone|phonePipe}}</td>
+            <td>{{hero.Email}}</td>
+            <td>{{hero.Date | date}}</td>
+            <td>{{hero.Country}}</td>
+            <td>{{hero.Company}}</td>
+        </tr>
+    </tbody>
+</table>
